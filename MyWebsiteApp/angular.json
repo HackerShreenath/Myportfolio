@@ -5,17 +5,7 @@
   "projects": {
     "MyWebsiteApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -31,6 +21,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",   // ✅ Added this line
               {
                 "glob": "**/*",
                 "input": "public"
@@ -89,6 +80,7 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/assets",   // ✅ Added this line
               {
                 "glob": "**/*",
                 "input": "public"
